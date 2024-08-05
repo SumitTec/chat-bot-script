@@ -1,17 +1,17 @@
 (function () {
   const script = document.createElement("script");
-  const local = window.location.hostname === "localhost";
-  // Ensure these paths are correct
-  const scriptSrc = local
-    ? "http://localhost:3000/static/js/bundle.js" // Local development path
-    : "https://chat-bot-script.vercel.app/static/js/main.js"; // Path for Vercel deployment
+  // Use the correct Vercel path for the chatbot bundle
+  const scriptSrc = "https://chat-bot-script.vercel.app/static/js/main.js";
 
   script.src = scriptSrc;
+
   script.onload = function () {
-    // Optionally, define the custom element here if not done in main.js
+    console.log("Chatbot script loaded successfully.");
   };
-  script.onerror = function () {
-    console.error("Failed to load the chatbot script.");
+
+  script.onerror = function (error) {
+    console.error("Failed to load the chatbot script:", error);
   };
+
   document.head.appendChild(script);
 })();
