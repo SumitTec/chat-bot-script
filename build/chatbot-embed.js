@@ -3,6 +3,8 @@
   // Use the correct Vercel path for the chatbot bundle
   const scriptSrc = "https://chat-bot-script.vercel.app/static/js/main.js";
 
+  console.log("Loading script from:", scriptSrc); // Debugging line
+
   script.src = scriptSrc;
 
   script.onload = function () {
