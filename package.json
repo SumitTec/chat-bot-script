@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp src/chatbot-web-component.js build/chatbot-web-component.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
