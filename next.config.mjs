@@ -5,7 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  exportTrailingSlash: true,
 };
 
 export default nextConfig;
